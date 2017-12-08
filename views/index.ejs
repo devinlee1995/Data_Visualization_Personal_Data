@@ -1,0 +1,110 @@
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Final_Project</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<link rel = "stylesheet" href = "css/style.css">
+
+	
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" style = "background: rgba(0, 0, 0, 0.4); border: none;">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<p class="navbar-brand" style = "margin: 0px; color: white;">Personal Data</p>
+    			</div>
+    			<ul class="nav navbar-nav navbar-right">
+	      			<li><a class="Home_Link" target="Home"style = "color:white;">Home</a></li>
+	      			<li><a class="Diet_Link" target="Diet" style = "color:white;">Diet</a></li>
+	      			<li><a class="Mobile_Link" target="Mobile" style = "color:white;4">Mobile</a></li>
+	      			<li><a class ="Sleep_Link" target="Sleep" style = "color:white;">Sleep</a></li>
+	      			<li><a class ="Comparison_Link" target="Comparison" style = "color:white;">Comparison</a></li>
+    			</ul>
+  			</div>
+		</nav>
+
+			<div class="container-fluid" style = "background-color:#82CCF0; margin-bottom:5%;">
+			<div id = "Home" class = "row">
+				<div class = "col-md-6">
+					<div id = "logo"></div>
+				</div>	
+				<div class = "col-md-6">
+					<h1 class = "Headline">Personal Data</h1>
+					<h2 class = "SubHeadline">Tracking personal data for the months of September, October, and November.<h2>
+					<p class = "description">
+					Hello! My name is Devin Lee, and I tracked my own personal data to see what I can find out about myself. It was pretty shocking, and I would like to show you my discoveries.
+					</p>	
+					<div id = "home_button">
+						<a target="Mobile" type="button" class="btn btn-primary btn-lg Diet_Link">Click to Start</a>
+					</div>
+				</div>
+			</div>
+			</div>
+
+		<div class ="container-fluid" style = "margin-bottom: 15%;">
+		<div id = "Diet" class = "row">	
+			<h1 class = "Headline_Data">Diet Data</h1>
+			<p class = "description_Data"> I calculated my Macros (percentages of Carbs, Fats, and Proteins) from what I consumed for each month.</p>
+			<div class="form-group row col-md-4 col-md-offset-4">
+				 <label class = "Select" for="sel1">Select:</label>
+				 <select class="form-control options">
+				 	<option value="total"> Total Average</option>
+				 	<option value="option1">September</option>
+				 	<option value="option2">October</option>
+				 	<option value="option3">November</option>
+				</select>
+			</div>
+
+			<!-- <form class = "col-md-12">
+				<label><input type="radio" name="dataset" id="dataset" value="total" checked> Total Average</label>
+				<label><input type="radio" name="dataset" id="dataset" value="option1">September Average</label>
+			</form> -->
+		</div>	
+	</div>	
+	
+
+		<div class ="container-fluid">
+			<div id = "Mobile" class = "row col-md-10 col-md-offset-1" style = "margin-bottom: 5%;">
+				<h1 class = "Headline_Data">Mobile Data</h1>
+				<p class = "description_Data"> I tracked how much I used my phone each day. </p>
+				<iframe id="dv-d6d35a1512717969700" src="https://s3.amazonaws.com/datavisual/embeds/7167d7046e.html" style="height:450px; max-width:800px; width:100%; border: 0px; overflow: hidden" scrolling="no"></iframe>
+				<script src="http://datavisu.al/js/lazyLoad.js#!dv-d6d35a1512717969700,7167d7046e.html"></script>
+		
+		</div>	
+
+		<div class ="container-fluid">
+			<div id = "Sleep" class = "row col-md-10 col-md-offset-1">
+				<h1 class = "Headline_Data">Sleep Data</h1>
+				<p class = "description_Data"> I tracked how much I slept each day. </p>
+				<iframe id="dv-d6d35a1512717904632" src="https://s3.amazonaws.com/datavisual/embeds/a6bb032d8d.html" style="height:450px; max-width:800px; width:100%; border: 0px; overflow: hidden" scrolling="no"></iframe>
+				<script src="http://datavisu.al/js/lazyLoad.js#!dv-d6d35a1512717904632,a6bb032d8d.html"></script>
+			</div>
+		</div>	
+
+		<div class ="container-fluid" style = "padding-bottom:0%;">
+		<div id = "Comparison" class = "row col-md-10 col-md-offset-1">	
+			<h1 class = "Headline_Data">Comparison Data</h1>
+			<p class = "description_Data">This is a comparison of my sleep and moblile usage data. Move your mouse over the graph to get exact numbers for each. </p>
+			<div id = "Comparison_graph"></div>
+		</div>	
+		</div>
+
+	<!-- 	<div class ="container-fluid">
+			<div id = "Comparison" class = "row col-md-10 col-md-offset-1">
+				<h1 class = "Headline_Data">Comparison Data (Mobile vs. Sleep)</h1>
+				<p class = "description_Data"> This is a comparison of how much I used my phone and how much I slept. </p>
+				<iframe id="dv-d6bf211512196131907" src="https://s3.amazonaws.com/datavisual/embeds/a3137b1e78.html" style="height:450px; width:100%; border: 0px; overflow: hidden" scrolling="no"></iframe>
+				<script src="http://datavisu.al/js/lazyLoad.js#!dv-d6bf211512196131907,a3137b1e78.html"></script>
+			</div>
+		</div> -->	
+
+	</div>
+			
+	<script src="js/line.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
