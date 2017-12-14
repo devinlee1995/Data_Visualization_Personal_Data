@@ -101,7 +101,7 @@ var myData = "date, Mobile, Sleep \n\
       .range([height, 0]);
 
     var color = d3.scale.ordinal()
-  .range(["#ffce4b", "#ff5252"]);
+  .range(["#9edbcc", "#c2b3e8"]);
 
     var xAxis = d3.svg.axis()
       .scale(x)
@@ -124,6 +124,7 @@ var myData = "date, Mobile, Sleep \n\
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
+      .style("fill", "#828282")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var data = d3.csv.parse(myData);
@@ -197,7 +198,9 @@ var myData = "date, Mobile, Sleep \n\
     svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
+      .style("fill", "#828282")
       .call(xAxis);
+
 
     svg.append("g")
       .attr("class", "y axis")
@@ -207,6 +210,7 @@ var myData = "date, Mobile, Sleep \n\
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
+      .style("fill", "#828282")
       .text("Time Spent (Minutes)");
 
     
@@ -221,6 +225,7 @@ var myData = "date, Mobile, Sleep \n\
       .attr("d", function(d) {
         return line(d.values);
       })
+      .style("stroke-width", "2.5px")
       .style("stroke", function(d) {
         return color(d.name);
       });
@@ -235,8 +240,8 @@ var myData = "date, Mobile, Sleep \n\
       .attr("transform", function(d) {
         return "translate(" + x(d.value.date) + "," + y(d.value.temperature) + ")";
       })
-      .attr("x", 3)
-      .attr("dy", ".35em")
+      .attr("x", 6)
+      .attr("dy", ".8em")
       .text(function(d) {
         return d.name;
       });
@@ -245,9 +250,9 @@ var myData = "date, Mobile, Sleep \n\
     var mouseG = svg.append("g")
       .attr("class", "mouse-over-effects");
 
-    mouseG.append("path") // this is the black vertical line to follow mouse
+    mouseG.append("path") // this is the vertical line to follow mouse
       .attr("class", "mouse-line")
-      .style("stroke", "black")
+      .style("stroke", "#828282")
       .style("stroke-width", "1px")
       .style("opacity", "0");
       
@@ -257,6 +262,7 @@ var myData = "date, Mobile, Sleep \n\
       .data(cities)
       .enter()
       .append("g")
+      .style("fill", "#828282")
       .attr("class", "mouse-per-line");
 
     mousePerLine.append("circle")

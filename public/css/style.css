@@ -193,7 +193,7 @@ text {
 .axis path,
     .axis line {
       fill: none;
-      stroke: #000;
+      stroke: #777777;
       shape-rendering: crispEdges;
     }
     
@@ -203,6 +203,6 @@ text {
     
     .line {
       fill: none;
-      stroke: steelblue;
+      stroke: #777777;
       stroke-width: 1.5px;
     }
